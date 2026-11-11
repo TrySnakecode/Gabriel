@@ -1,0 +1,15 @@
+/* ESTARÉLIA: functional clarity for search, gallery, mobile and form. */
+.hero-text h1{font-size:clamp(3.15rem,4.65vw,6.3rem);line-height:1.08;text-wrap:balance}
+.hero-text p{line-height:1.75;text-wrap:pretty}
+.search-panel{border:1px solid #cfc7b7;box-shadow:0 16px 44px #17291e1a}
+.search-panel .field label,.filter-stack .field label{color:#3b5246;font-weight:700}
+.property-card-info h3{line-height:1.16;text-wrap:balance}
+.property-card-info .overline{line-height:1.5}
+.property-card-info .card-footer{gap:8px;flex-wrap:wrap}
+.property-card .photo-label{line-height:1.4}
+.filter-panel{min-width:0}
+.page-header p,.editorial-copy p{line-height:1.8;max-width:640px}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #aa7343;outline-offset:3px}
+@media(max-width:900px){.hero-text h1{font-size:clamp(3rem,8vw,5.8rem)}.hero-text{padding-top:60px;padding-bottom:35px}}
+@media(max-width:420px){.hero-text h1{font-size:clamp(2.7rem,12vw,4rem)}.hero-text p{font-size:.91rem}.search-panel{padding:21px 17px}.property-card-info{padding-top:16px}.property-card .status{font-size:.54rem}}
+@media(prefers-reduced-motion:reduce){.hero-image img{animation:none!important;transform:none!important}}

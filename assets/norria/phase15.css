@@ -1,0 +1,13 @@
+/* NÓRRIA: clear paths from collection to product and sample checkout. */
+.nr-phase12 .nr-hero h1{font-size:clamp(4.6rem,8.1vw,8.5rem);line-height:.98;text-wrap:balance}
+.nr-hero-copy p,.nr-copy{line-height:1.78;text-wrap:pretty}
+.nr-section-heading .nr-h2,.nr-page-heading .nr-h1{line-height:1.07;text-wrap:balance}
+.nr-product-card h3{font-size:1rem;line-height:1.4}
+.nr-product-visual{min-width:0}
+.nr-gallery-main img{object-fit:contain}
+.nr-product-info{min-width:0}
+.nr-product-info .nr-copy{font-size:1rem;line-height:1.8}
+.nr-footer p{line-height:1.7}
+.nr-btn:focus-visible,.nr-fav-on-image:focus-visible,.nr-product-info button:focus-visible{outline:3px solid #b18a6f;outline-offset:3px}
+@media(max-width:720px){.nr-phase12 .nr-hero h1{font-size:clamp(3.7rem,11.5vw,5.2rem);line-height:.99}.nr-section-heading .nr-h2{font-size:clamp(2.7rem,8vw,4.4rem)}}
+@media(max-width:390px){.nr-phase12 .nr-hero h1{font-size:clamp(3.1rem,12vw,3.8rem)}}

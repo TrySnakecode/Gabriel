@@ -1,0 +1,26 @@
+/* ORÍVIA — cartões informativos dimensionados pelo conteúdo real. */
+@media (max-width: 850px) {
+  .or-container, .or-procedure-grid, .or-book-layout, .or-form,
+  .or-hero-copy, .or-page-header { min-width: 0; }
+  .or-procedure-grid { grid-template-columns: minmax(0,1fr); }
+  .or-procedure-card {
+    height: auto !important; min-height: 0 !important; display: flex;
+    flex-direction: column; padding: clamp(22px,6vw,30px);
+    overflow: hidden; gap: 0;
+  }
+  .or-procedure-card h3 { margin: 22px 0 12px; line-height: 1.12; overflow-wrap: anywhere; }
+  .or-procedure-card p { max-width: 100%; margin: 0 0 20px; line-height: 1.7; }
+  .or-procedure-card .arrow { margin-top: auto; min-width: 44px; min-height: 44px; }
+  .or-procedure-card:after { bottom: -10px; font-size: 116px; opacity: .55; }
+  .or-h1, .or-h2, .or-page-header h1 { overflow-wrap: anywhere; }
+  .or-form input, .or-form textarea, .or-form select { min-width: 0; max-width: 100%; font-size: 16px; }
+  .or-form button, .or-option, .or-toggle, .or-action { min-height: 44px; }
+  .or-book-layout > * { min-width: 0; }
+}
+@media(max-width: 380px) {
+  .or-hero-copy .or-h1 { font-size: clamp(48px,13.4vw,60px); }
+  .or-page-header .or-h1 { font-size: clamp(45px,12.3vw,58px); }
+  .or-option-grid { grid-template-columns: minmax(0,1fr); }
+  .or-procedure-card { padding: 22px; }
+}
+@media(max-width:850px){.or-procedure-card:after{bottom:18px}}

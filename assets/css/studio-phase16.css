@@ -1,0 +1,39 @@
+/* Fase 16: guide preview should never crop embedded typography or obscure descriptions. */
+.quick-index{margin-top:clamp(70px,8vw,140px)}
+.quick-index-layout{gap:clamp(20px,4vw,55px)}
+.index-preview{grid-template-rows:auto auto;min-height:0;overflow:hidden;border-radius:2px;background:#252824}
+.index-media{height:auto;aspect-ratio:16/10;max-height:455px;min-height:260px;display:flex;align-items:center;justify-content:center;background:#e7e5db;overflow:hidden}
+.index-media img{width:100%;height:100%;object-fit:cover;object-position:center;max-width:none;max-height:none;filter:none;transition:opacity .35s ease,transform .55s ease}
+.index-media[data-index-kind="aurina"]{background:#dde6df}.index-media[data-index-kind="aurina"] img{object-fit:contain;padding:14px}
+.index-media[data-index-kind="norria"]{background:#3d3935}.index-media[data-index-kind="norria"] img{object-fit:cover}
+.index-media[data-index-kind="estarelia"] img,.index-media[data-index-kind="orivia"] img{object-fit:cover}
+.index-media:after{content:'';position:absolute;inset:55% 0 0;pointer-events:none;background:linear-gradient(transparent,#10141077)}
+.index-media-caption{z-index:2;left:22px;bottom:18px;color:#fff;text-shadow:0 1px 10px #14131088}
+.index-media-brand{position:absolute;z-index:2;right:24px;bottom:20px;font-family:'Instrument Serif',Georgia,serif;font-size:clamp(27px,3.7vw,55px);font-weight:400;color:#fff;letter-spacing:-.015em;line-height:1;white-space:nowrap;text-shadow:0 2px 22px #0008}
+.index-details{padding:26px clamp(20px,3vw,36px) 30px;align-items:center;gap:26px;min-height:200px}
+.index-details>div:first-child{max-width:520px;min-width:0}
+.index-details span[data-index-tag]{font-size:10px;line-height:1.6;letter-spacing:.12em;margin-bottom:9px}
+.index-details h4{font-size:clamp(27px,3.1vw,42px);line-height:1.08;margin-bottom:9px;letter-spacing:-.04em}
+.index-details p{font-size:clamp(12px,1.1vw,14px);line-height:1.7;max-width:52ch;color:#e7e3da}
+.index-actions{min-width:155px;gap:10px}
+.index-actions a{font-size:11px;line-height:1.45;padding:10px 0}
+.index-choice{min-height:100px}
+@media(max-width:1050px){.index-details{flex-direction:column;align-items:stretch}.index-actions{flex-direction:row;gap:20px}.index-actions a{flex:1;white-space:normal}.index-media{min-height:220px}}
+@media(max-width:800px){.index-media{min-height:0;max-height:none;aspect-ratio:16/9}.index-details{flex-direction:row;align-items:flex-end}}
+@media(max-width:620px){.index-media{aspect-ratio:4/3}.index-media-brand{right:18px;bottom:18px;font-size:clamp(29px,7vw,44px)}.index-details{display:block;padding:23px 20px 26px}.index-details p{font-size:13px}.index-actions{margin-top:19px;display:grid;grid-template-columns:1fr 1fr;gap:15px}.index-actions a{font-size:11px}.index-choice{min-height:82px}.index-media[data-index-kind="aurina"] img{padding:5px}}
+@media(max-width:360px){.index-media-brand{font-size:28px}.index-media{aspect-ratio:1.25}.index-actions{grid-template-columns:1fr;gap:4px}.index-choice{min-height:72px}}
+
+
+/* Mobile-safe iconography: SVGs replace font/emoji symbols across devices. */
+.vector-icon{display:block;flex:none;width:1em;height:1em;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle;overflow:visible}
+.motion-switch .vector-icon{width:17px;height:17px}
+.asterisk{display:inline-flex;align-items:center;justify-content:center;line-height:1}
+.asterisk .vector-icon{width:19px;height:19px}
+.portrait-asterisk .vector-icon{width:52%;height:52%}
+.ticker-unit b{display:inline-flex;align-items:center;justify-content:center;line-height:1}
+.ticker-unit b .vector-icon{width:22px;height:22px}
+.statement-star{display:inline-flex;align-items:center;justify-content:center}
+.statement-star .vector-icon{width:clamp(78px,10vw,145px);height:clamp(78px,10vw,145px)}
+.concept-note .concept-icon{display:inline-flex;vertical-align:-3px;align-items:center;justify-content:center;color:var(--rust)}
+.concept-note .concept-icon .vector-icon{width:15px;height:15px}
+@media(max-width:480px){.motion-switch .vector-icon{width:15px;height:15px}.ticker-unit b .vector-icon{width:18px;height:18px}.portrait-asterisk .vector-icon{width:48%;height:48%}}

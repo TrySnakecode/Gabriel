@@ -1,0 +1,21 @@
+/* AURÍNA — foco na legibilidade e no agendamento em telas pequenas. */
+@media (max-width: 760px) {
+  .au-container, .au-hero-grid, .au-page-grid, .au-book-layout,
+  .au-form, .au-hero-copy, .au-hero-visual, .au-card-grid { min-width: 0; }
+  .au-h1, .au-h2, .au-h3 { overflow-wrap: anywhere; hyphens: auto; }
+  .au-hero-copy .au-h1 { line-height: 1.02; }
+  .au-form input, .au-form textarea, .au-form select,
+  .au-booking input, .au-booking select { min-width: 0; max-width: 100%; font-size: 16px; }
+  .au-form button, .au-form [role=button], .au-book,
+  .au-menu-toggle, .au-option, .au-action { min-height: 44px; }
+  .au-hero-actions { flex-wrap: wrap; gap: 10px; }
+  .au-hero-actions > * { max-width: 100%; }
+}
+@media (max-width: 380px) {
+  .au-head-inner { gap: 6px; }
+  .au-languages { gap: 4px; }
+  .au-hero-copy .au-h1 { font-size: clamp(46px, 13vw, 57px); }
+  .au-page-header .au-h1 { font-size: clamp(43px, 11.5vw, 58px); }
+  .au-form { padding-inline: 14px; }
+  .au-specialties-grid { grid-template-columns: 1fr; }
+}

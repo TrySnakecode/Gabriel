@@ -1,0 +1,93 @@
+/* Gabriel Basso Studio — revisão mobile Fase 17.
+   Regras específicas para os cinco websites e estudos de caso;
+   o projeto desktop e as integrações originais permanecem intocados. */
+@media (max-width: 800px) {
+  /* Portfólio principal — componentes interativos legíveis por toque. */
+  .header-inner, .nav-right, .hero-body, .quick-index-layout,
+  .index-preview, .index-details, .work-card, .work-links,
+  .contact-layout, .contact-panel, .form-grid { min-width: 0; }
+  .index-details p, .opening-note, .work-description, .contact-text p,
+  .about-content p { overflow-wrap: anywhere; }
+  .index-choice, .index-actions a, .work-links a, .hero-links a { min-height: 44px; }
+  .index-actions a { display: inline-flex; align-items: center; }
+  .contact-form input, .contact-form select, .contact-form textarea {
+    min-width: 0; max-width: 100%; font-size: 16px; line-height: 1.45;
+  }
+  .contact-form .submit-button { min-height: 50px; }
+  .work-visual img { object-position: center; }
+}
+@media (max-width: 580px) {
+  .hero-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+  .hero-links a { max-width: 100%; }
+  .work-links { flex-wrap: wrap; gap: 8px 18px; }
+  .work-links a { flex: 1 1 135px; }
+  .index-tabs { gap: 0; }
+  .index-choice { padding: 16px 12px; }
+  .index-preview .index-media { max-width: 100%; }
+  .index-media-brand { max-width: calc(100% - 34px); white-space: normal; overflow-wrap: anywhere; text-align: right; }
+  .contact-channels strong { overflow-wrap: anywhere; }
+  .form-grid .field, .form-grid .field-full { min-width: 0; }
+  .contact-panel { padding-inline: clamp(15px, 5vw, 25px); }
+}
+@media (max-width: 359px) {
+  .hero h1 { font-size: clamp(47px, 14vw, 54px); }
+  .identity-mark { min-width: 40px; }
+  .nav-right { gap: 8px; }
+  .index-tabs { grid-template-columns: 1fr 1fr; }
+  .index-choice { padding: 13px 8px; min-height: 81px; }
+  .index-label strong { font-size: 18px; }
+  .index-actions { grid-template-columns: 1fr; }
+  .index-details { padding: 20px 16px; }
+  .contact-text h2 { font-size: clamp(43px, 12.5vw, 53px); }
+}
+
+/* Estudos de caso — todos os itens da navegação visíveis, sem cortes laterais. */
+@media (max-width: 800px) {
+  .case-body .case-subnav-inner { display: block; padding-block: 13px 15px; min-height: auto; }
+  .case-body .case-subnav nav {
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px; overflow: visible; width: 100%;
+  }
+  .case-body .case-subnav nav a {
+    display: flex; align-items: center; min-width: 0; min-height: 45px;
+    white-space: normal; overflow-wrap: anywhere; line-height: 1.35;
+    padding: 10px 12px; font-size: 11px;
+    border: 1px solid #ffffff35; background: #ffffff0c;
+  }
+  .case-body .case-hero-layout, .case-body .case-intro-grid,
+  .case-body .case-brand-intro, .case-body .case-screen-pair,
+  .case-body .case-capabilities-grid { min-width: 0; }
+  .case-body .case-hero h1, .case-body .case-hero-dek,
+  .case-body .case-feature-list strong, .case-body .case-next-link span:first-child {
+    overflow-wrap: anywhere; hyphens: auto;
+  }
+  .case-body .case-button { min-height: 48px; }
+  .case-body .case-feature-list li { gap: 17px; }
+}
+@media (max-width: 580px) {
+  .case-body .case-header-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+  .case-body .case-subnav nav { gap: 6px; }
+  .case-body .case-subnav nav a { font-size: 10.5px; padding: 10px; }
+  .case-body .case-hero-actions { align-items: stretch; }
+  .case-body .case-hero-actions a { max-width: 100%; }
+  .case-body .case-hero-visual img { height: auto; min-height: 0; aspect-ratio: 4/3; object-fit: cover; }
+  .case-body.case-dental .case-hero-visual img { object-fit: contain; }
+  .case-body .case-flow { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .case-body .case-flow-step { min-width: 0; margin-right: 0; padding-right: 12px; }
+  .case-body .case-flow-step:nth-child(even) { padding-left: 12px; padding-right: 0; }
+  .case-body .case-flow-step h3 { overflow-wrap: anywhere; }
+  .case-body .case-feature-list li { padding: 16px 0; }
+  .case-body .case-next-link { min-width: 0; }
+  .case-body .case-next-link span:first-child { font-size: clamp(38px, 10.5vw, 62px); }
+}
+@media (max-width: 359px) {
+  .case-body .case-logo { font-size: 30px; }
+  .case-body .case-header-nav { gap: 5px; }
+  .case-body .case-nav-cta { font-size: 9px; padding: 10px 8px; }
+  .case-body .case-flow { grid-template-columns: 1fr; }
+  .case-body .case-flow-step, .case-body .case-flow-step:nth-child(even) {
+    border-right: 0; padding: 16px 0; margin: 0;
+  }
+  .case-body .case-flow-step h3 { margin-block: 9px 6px; }
+  .case-body .case-next-link span:first-child { font-size: 37px; }
+}

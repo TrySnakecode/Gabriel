@@ -1,0 +1,11 @@
+/* AURÍNA: readable editorial hierarchy with accessible, calmer movement. */
+.au-hero-copy .au-h1{font-size:clamp(3.7rem,6.55vw,7.2rem);line-height:1.02;max-width:730px;text-wrap:balance}
+.au-hero-copy .au-lead{max-width:560px;font-size:clamp(1rem,1.17vw,1.17rem);line-height:1.76;text-wrap:pretty}
+.au-service h3{line-height:1.15!important;text-wrap:balance}
+.au-service p{font-size:.87rem;line-height:1.7}
+.au-page-hero .au-h1{line-height:1.03;text-wrap:balance}
+.au-info-list article{scroll-margin-top:110px}
+.au-form-note,.au-disclaimer{line-height:1.7}
+.au-booking-main input:focus-visible,.au-booking-main button:focus-visible{outline:3px solid #a86e50;outline-offset:3px}
+@media(max-width:850px){.au-hero-copy .au-h1{font-size:clamp(3.7rem,9.6vw,6rem)}}
+@media(max-width:620px){.au-hero-copy .au-h1{font-size:clamp(3.1rem,12vw,4.4rem);line-height:1.02}.au-home-hero .au-lead{font-size:1rem}.au-service h3{font-size:2.25rem!important}}

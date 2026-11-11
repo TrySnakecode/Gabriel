@@ -1,0 +1,485 @@
+[
+  {
+    "id": "EA-101",
+    "title": {
+      "pt": "Casa do Pátio",
+      "en": "Courtyard House"
+    },
+    "type": "casa",
+    "purpose": "venda",
+    "price": 6350000,
+    "city": "São Paulo",
+    "district": "Jardim Europa",
+    "area": 420,
+    "beds": 4,
+    "baths": 5,
+    "spots": 4,
+    "features": [
+      "piscina",
+      "jardim",
+      "area-gourmet"
+    ],
+    "status": "disponivel",
+    "image": "bruma-hero.webp",
+    "featured": true,
+    "description": {
+      "pt": "Uma proposta residencial organizada em torno do pátio, com áreas sociais voltadas à luz natural e espaços de convivência. O imóvel e seus dados são inteiramente conceituais.",
+      "en": "A courtyard-led residential concept with daylit social areas and spaces for gathering. This listing and its specifications are entirely fictional."
+    }
+  },
+  {
+    "id": "EA-102",
+    "title": {
+      "pt": "Refúgio da Serra",
+      "en": "Mountain Retreat"
+    },
+    "type": "casa",
+    "purpose": "venda",
+    "price": 7800000,
+    "city": "Campos do Jordão",
+    "district": "Capivari",
+    "area": 510,
+    "beds": 5,
+    "baths": 6,
+    "spots": 5,
+    "features": [
+      "vista",
+      "lareira",
+      "jardim"
+    ],
+    "status": "disponivel",
+    "image": "refugio-dia.webp",
+    "featured": true,
+    "description": {
+      "pt": "Volumes de madeira e pedra sugerem uma rotina mais próxima da paisagem de serra. Uma narrativa de arquitetura criada para demonstrar a apresentação de um imóvel de alto padrão.",
+      "en": "Stone and timber forms suggest a home closely connected to mountain scenery. An architectural narrative created to demonstrate a premium listing."
+    }
+  },
+  {
+    "id": "EA-103",
+    "title": {
+      "pt": "Apartamento Aura",
+      "en": "Aura Apartment"
+    },
+    "type": "apartamento",
+    "purpose": "venda",
+    "price": 2950000,
+    "city": "São Paulo",
+    "district": "Vila Nova Conceição",
+    "area": 165,
+    "beds": 3,
+    "baths": 4,
+    "spots": 2,
+    "features": [
+      "varanda",
+      "vista"
+    ],
+    "status": "disponivel",
+    "image": "apartamento-aura.webp",
+    "featured": true,
+    "description": {
+      "pt": "Uma proposta de apartamento com atmosfera serena, materiais naturais e ambientes integrados. A apresentação demonstra como uma imobiliária pode organizar as informações essenciais.",
+      "en": "A calm apartment concept with natural materials and connected living spaces. The presentation demonstrates a clear way to organize a property listing."
+    }
+  },
+  {
+    "id": "EA-104",
+    "title": {
+      "pt": "Residência Ipê",
+      "en": "Ipe Residence"
+    },
+    "type": "casa",
+    "purpose": "venda",
+    "price": 4500000,
+    "city": "Curitiba",
+    "district": "Batel",
+    "area": 318,
+    "beds": 4,
+    "baths": 4,
+    "spots": 3,
+    "features": [
+      "jardim",
+      "area-gourmet"
+    ],
+    "status": "reservado",
+    "image": "casa-patio.webp",
+    "featured": false,
+    "description": {
+      "pt": "Uma residência imaginária que valoriza o jardim, a vida ao ar livre e a continuidade entre dentro e fora. Referências e preços são ilustrativos.",
+      "en": "An imagined residence shaped around greenery, outdoor living, and a seamless indoor–outdoor connection. References and pricing are illustrative."
+    }
+  },
+  {
+    "id": "EA-105",
+    "title": {
+      "pt": "Casa Horizonte",
+      "en": "Horizon House"
+    },
+    "type": "casa",
+    "purpose": "venda",
+    "price": 5200000,
+    "city": "Florianópolis",
+    "district": "Jurerê",
+    "area": 360,
+    "beds": 4,
+    "baths": 5,
+    "spots": 3,
+    "features": [
+      "piscina",
+      "vista"
+    ],
+    "status": "disponivel",
+    "image": "casa-sala.webp",
+    "featured": true,
+    "description": {
+      "pt": "A narrativa desta casa privilegia horizontes abertos, ventilação e convivência. Um conceito visual — não uma oferta comercial em Jurerê.",
+      "en": "This home design narrative prioritizes open views, fresh air and shared moments. A visual concept, not a commercial offer in Jurerê."
+    }
+  },
+  {
+    "id": "EA-106",
+    "title": {
+      "pt": "Loft Alameda",
+      "en": "Alameda Loft"
+    },
+    "type": "apartamento",
+    "purpose": "aluguel",
+    "price": 14500,
+    "city": "São Paulo",
+    "district": "Pinheiros",
+    "area": 140,
+    "beds": 2,
+    "baths": 2,
+    "spots": 2,
+    "features": [
+      "varanda"
+    ],
+    "status": "disponivel",
+    "image": "casa-cozinha.webp",
+    "featured": false,
+    "description": {
+      "pt": "Compacto na medida certa para uma rotina urbana, este loft conceitual combina planta fluida e seleção cuidadosa de materiais.",
+      "en": "Proportioned for urban life, this conceptual loft combines a flexible floor plan with carefully considered materials."
+    }
+  },
+  {
+    "id": "EA-107",
+    "title": {
+      "pt": "Cobertura Mirante",
+      "en": "Mirante Penthouse"
+    },
+    "type": "cobertura",
+    "purpose": "venda",
+    "price": 9200000,
+    "city": "São Paulo",
+    "district": "Itaim Bibi",
+    "area": 395,
+    "beds": 4,
+    "baths": 5,
+    "spots": 4,
+    "features": [
+      "piscina",
+      "vista",
+      "varanda"
+    ],
+    "status": "disponivel",
+    "image": "casa-suite.webp",
+    "featured": true,
+    "description": {
+      "pt": "Uma cobertura imaginada como refúgio no alto da cidade, explorando privacidade, luz e uma relação aberta com a paisagem.",
+      "en": "A penthouse imagined as a retreat above the city, exploring privacy, light and an open relationship with the skyline."
+    }
+  },
+  {
+    "id": "EA-108",
+    "title": {
+      "pt": "Terreno Orvalho",
+      "en": "Dewland Plot"
+    },
+    "type": "terreno",
+    "purpose": "venda",
+    "price": 1480000,
+    "city": "Campinas",
+    "district": "Gramado",
+    "area": 850,
+    "beds": 0,
+    "baths": 0,
+    "spots": 0,
+    "features": [
+      "jardim"
+    ],
+    "status": "disponivel",
+    "image": "concept-ea-108.svg",
+    "featured": false,
+    "description": {
+      "pt": "Um estudo de lote para quem busca visualizar potencial construtivo e orientação de terreno. A ilustração não representa levantamento topográfico.",
+      "en": "A plot study illustrating how land potential could be presented. The artwork is not a topographic survey."
+    }
+  },
+  {
+    "id": "EA-109",
+    "title": {
+      "pt": "Estúdio Pedra",
+      "en": "Stone Studio"
+    },
+    "type": "comercial",
+    "purpose": "aluguel",
+    "price": 9800,
+    "city": "São Paulo",
+    "district": "Jardins",
+    "area": 112,
+    "beds": 0,
+    "baths": 2,
+    "spots": 1,
+    "features": [
+      "vista"
+    ],
+    "status": "disponivel",
+    "image": "concept-ea-109.svg",
+    "featured": false,
+    "description": {
+      "pt": "Espaço comercial conceitual para estúdios, atendimento ou operação criativa, com foco em localização, área e flexibilidade.",
+      "en": "A conceptual commercial studio for creative work or client-facing use, emphasizing location, floor area and flexibility."
+    }
+  },
+  {
+    "id": "EA-110",
+    "title": {
+      "pt": "Vila Oliva",
+      "en": "Olive Villa"
+    },
+    "type": "casa",
+    "purpose": "venda",
+    "price": 3850000,
+    "city": "Porto Alegre",
+    "district": "Três Figueiras",
+    "area": 280,
+    "beds": 3,
+    "baths": 4,
+    "spots": 3,
+    "features": [
+      "jardim",
+      "lareira"
+    ],
+    "status": "vendido",
+    "image": "concept-ea-110.svg",
+    "featured": false,
+    "description": {
+      "pt": "Uma casa de ritmo tranquilo, com jardins e zonas de convívio pensadas como extensão do cotidiano. A composição é conceitual.",
+      "en": "A home imagined around a quieter daily rhythm, with gardens and welcoming communal spaces. The composition is conceptual."
+    }
+  },
+  {
+    "id": "EA-111",
+    "title": {
+      "pt": "Cobertura Atlântico",
+      "en": "Atlantic Penthouse"
+    },
+    "type": "cobertura",
+    "purpose": "aluguel",
+    "price": 22000,
+    "city": "Florianópolis",
+    "district": "Centro",
+    "area": 240,
+    "beds": 3,
+    "baths": 4,
+    "spots": 2,
+    "features": [
+      "vista",
+      "varanda"
+    ],
+    "status": "disponivel",
+    "image": "concept-ea-111.svg",
+    "featured": false,
+    "description": {
+      "pt": "Um estudo de cobertura em que terraço e vista protagonizam a experiência. Nenhum edifício real está representado nesta ilustração.",
+      "en": "A penthouse study where terrace and outlook define the experience. The illustration does not depict a real building."
+    }
+  },
+  {
+    "id": "EA-112",
+    "title": {
+      "pt": "Jardim das Pedras",
+      "en": "Stone Garden"
+    },
+    "type": "casa",
+    "purpose": "venda",
+    "price": 6900000,
+    "city": "Belo Horizonte",
+    "district": "Mangabeiras",
+    "area": 480,
+    "beds": 5,
+    "baths": 6,
+    "spots": 4,
+    "features": [
+      "piscina",
+      "jardim",
+      "area-gourmet"
+    ],
+    "status": "disponivel",
+    "image": "concept-ea-112.svg",
+    "featured": true,
+    "description": {
+      "pt": "Casa imaginária inspirada na textura dos materiais naturais e no encontro entre arquitetura e paisagismo. Dados apenas demonstrativos.",
+      "en": "An imagined residence informed by natural material textures and the meeting of architecture and landscape. All data is demonstrative."
+    }
+  },
+  {
+    "id": "EA-113",
+    "title": {
+      "pt": "Apartamento Nascente",
+      "en": "Sunrise Apartment"
+    },
+    "type": "apartamento",
+    "purpose": "venda",
+    "price": 1950000,
+    "city": "Curitiba",
+    "district": "Água Verde",
+    "area": 125,
+    "beds": 3,
+    "baths": 3,
+    "spots": 2,
+    "features": [
+      "varanda"
+    ],
+    "status": "disponivel",
+    "image": "concept-ea-113.svg",
+    "featured": false,
+    "description": {
+      "pt": "Um apartamento conceitual com foco em luz da manhã e espaços eficientes, apresentado como exemplo de organização de catálogo.",
+      "en": "A conceptual apartment focused on morning light and efficient spaces, presented as a catalog design example."
+    }
+  },
+  {
+    "id": "EA-114",
+    "title": {
+      "pt": "Terreno Altos",
+      "en": "Highlands Plot"
+    },
+    "type": "terreno",
+    "purpose": "venda",
+    "price": 2150000,
+    "city": "Campos do Jordão",
+    "district": "Alto da Boa Vista",
+    "area": 1800,
+    "beds": 0,
+    "baths": 0,
+    "spots": 0,
+    "features": [
+      "vista"
+    ],
+    "status": "reservado",
+    "image": "concept-ea-114.svg",
+    "featured": false,
+    "description": {
+      "pt": "Estudo visual de terreno que convida a explorar possibilidades de implantação, sem sugerir localização exata ou projeto aprovado.",
+      "en": "A visual land study suggesting potential development scenarios, without claiming an exact address or approved plans."
+    }
+  },
+  {
+    "id": "EA-115",
+    "title": {
+      "pt": "Galeria Centro",
+      "en": "Central Gallery"
+    },
+    "type": "comercial",
+    "purpose": "aluguel",
+    "price": 18000,
+    "city": "Campinas",
+    "district": "Cambuí",
+    "area": 210,
+    "beds": 0,
+    "baths": 3,
+    "spots": 4,
+    "features": [
+      "vista"
+    ],
+    "status": "disponivel",
+    "image": "concept-ea-115.svg",
+    "featured": false,
+    "description": {
+      "pt": "Uma galeria comercial imaginária com flexibilidade para diferentes configurações de uso. Ilustração e preço não correspondem a anúncio real.",
+      "en": "An imagined commercial gallery adaptable to different uses. The image and pricing do not refer to an actual listing."
+    }
+  },
+  {
+    "id": "EA-116",
+    "title": {
+      "pt": "Casa Brisa",
+      "en": "Breeze House"
+    },
+    "type": "casa",
+    "purpose": "aluguel",
+    "price": 17500,
+    "city": "Florianópolis",
+    "district": "Lagoa da Conceição",
+    "area": 260,
+    "beds": 3,
+    "baths": 4,
+    "spots": 2,
+    "features": [
+      "jardim",
+      "vista"
+    ],
+    "status": "disponivel",
+    "image": "concept-ea-116.svg",
+    "featured": false,
+    "description": {
+      "pt": "Um conceito de casa que valoriza ventilação cruzada, materiais táteis e ambientes pensados para encontros.",
+      "en": "A house concept emphasizing cross-breezes, tactile materials and spaces designed for gathering."
+    }
+  },
+  {
+    "id": "EA-117",
+    "title": {
+      "pt": "Apartamento Lume",
+      "en": "Lume Apartment"
+    },
+    "type": "apartamento",
+    "purpose": "venda",
+    "price": 2450000,
+    "city": "Porto Alegre",
+    "district": "Moinhos de Vento",
+    "area": 156,
+    "beds": 3,
+    "baths": 3,
+    "spots": 2,
+    "features": [
+      "varanda"
+    ],
+    "status": "alugado",
+    "image": "concept-ea-117.svg",
+    "featured": false,
+    "description": {
+      "pt": "Um apartamento imaginário para um cotidiano contemporâneo: circulação fluida, poucos excessos e boa leitura do espaço.",
+      "en": "An imagined apartment for contemporary living: fluid circulation, restrained detailing and a clear sense of space."
+    }
+  },
+  {
+    "id": "EA-118",
+    "title": {
+      "pt": "Casa Acervo",
+      "en": "Archive House"
+    },
+    "type": "casa",
+    "purpose": "venda",
+    "price": 5600000,
+    "city": "Belo Horizonte",
+    "district": "Belvedere",
+    "area": 370,
+    "beds": 4,
+    "baths": 5,
+    "spots": 4,
+    "features": [
+      "area-gourmet",
+      "piscina"
+    ],
+    "status": "indisponivel",
+    "image": "concept-ea-118.svg",
+    "featured": false,
+    "description": {
+      "pt": "Uma casa conceitual inspirada pela ideia de coleção: objetos, livros e paisagens reunidos em uma arquitetura silenciosa.",
+      "en": "A conceptual home inspired by collecting: objects, books and landscapes gathered within quiet architecture."
+    }
+  }
+]

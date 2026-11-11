@@ -1,0 +1,25 @@
+/* NÓRRIA — interfaces móveis de catálogo e compra sem perda de legibilidade. */
+@media (max-width: 760px) {
+  .nr-container, .nr-catalog-layout, .nr-product-grid, .nr-product-layout,
+  .nr-checkout-layout, .nr-cart-layout, .nr-hero-inner { min-width: 0; }
+  .nr-product-card { min-width: 0; }
+  .nr-product-card h3 { font-size: 13px !important; line-height: 1.4; overflow-wrap: anywhere; }
+  .nr-product-card p, .nr-product-card small { overflow-wrap: anywhere; }
+  .nr-product-visual img { width: 100%; height: 100%; object-fit: contain; }
+  .nr-header-inner { gap: 8px; }
+  .nr-header-actions { gap: 4px; }
+  .nr-product-form input, .nr-product-form select, .nr-checkout input,
+  .nr-checkout select, .nr-checkout textarea { min-width: 0; max-width: 100%; font-size: 16px; }
+  .nr-filter-toggle, .nr-menu-button, .nr-btn, .nr-size-button,
+  .nr-quantity button, .nr-product-action { min-height: 44px; }
+  .nr-cart-item, .nr-checkout-summary { min-width: 0; }
+}
+@media(max-width: 359px) {
+  .nr-product-grid { grid-template-columns: minmax(0,1fr) !important; gap: 23px; }
+  .nr-product-visual { max-width: 100%; aspect-ratio: 4/4.6; }
+  .nr-product-card h3 { font-size: 15px !important; }
+  .nr-header-inner { gap: 5px; }
+  .nr-brand { font-size: 18px; }
+  .nr-header-actions { gap: 2px; }
+  .nr-checkout .nr-btn, .nr-cart .nr-btn { width: 100%; }
+}

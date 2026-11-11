@@ -1,0 +1,127 @@
+/* NÓRRIA / EDITION 02 — editorial refinement, intentionally scoped to demonstration pages. */
+:root{--nr2-espresso:#292722;--nr2-clay:#b18a6f;--nr2-ivory:#f8f5ee}
+body.nr-phase12{background:#f6f2eb}
+.nr-phase12 .nr-announcement{background:#292925;color:#dcd2c4;border-bottom:1px solid #515047}
+.nr-phase12 .nr-header{background:rgba(249,246,240,.96)}
+.nr-phase12 .nr-header-inner{height:78px}
+.nr-phase12 .nr-brand{letter-spacing:.18em}
+.nr-phase12 .nr-hero--p12{background:#292722 url('phase12-textile-bronze.webp') 65% center/cover no-repeat;position:relative;isolation:isolate}
+.nr-phase12 .nr-hero--p12:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,21,19,.97) 0%,rgba(20,21,19,.89) 34%,rgba(20,21,19,.38) 69%,rgba(20,21,19,.42) 100%);pointer-events:none}
+.nr-phase12 .nr-hero-inner{min-height:760px}
+.nr-phase12 .nr-hero-copy{padding-top:100px;padding-bottom:105px}
+.nr-phase12 .nr-hero h1{font-size:clamp(72px,8.5vw,140px);text-shadow:0 2px 20px #0002}
+.nr-phase12 .nr-hero .nr-kicker{display:flex;align-items:center;gap:16px;color:#ddc7b6}
+.nr-phase12 .nr-hero .nr-kicker:before{content:'';width:27px;height:1px;background:#d4b299}
+.nr-phase12 .nr-hero-art:before{inset:14% 3% 15% 10%;background:rgba(231,224,211,.12);border:1px solid rgba(246,240,226,.36);backdrop-filter:blur(5px);box-shadow:28px 32px 90px #0005;transform:rotate(-3deg)}
+.nr-phase12 .nr-hero-garment{filter:drop-shadow(18px 28px 19px rgba(0,0,0,.22))}
+.nr-phase12 .nr-hero-garment:nth-of-type(1){left:10%;bottom:11%;width:55%;height:70%;transform:rotate(-11deg)}
+.nr-phase12 .nr-hero-garment:nth-of-type(2){right:-3%;bottom:1%;width:61%;height:80%;transform:rotate(8deg)}
+.nr-phase12 .nr-hero-art figcaption{right:7%;bottom:8%;line-height:1.7;max-width:250px;text-align:right;font-weight:700}
+.nr-phase12 .nr-value-row{background:var(--nr2-ivory);border-bottom:1px solid #d7cbbd}
+.nr-phase12 .nr-value-row div{font-size:10px;letter-spacing:.14em;padding:28px}
+.nr-phase12 .nr-section-heading{align-items:end}
+.nr-phase12 .nr-section-heading .nr-h2{letter-spacing:-.055em}
+.nr-phase12 .nr-editorial-tile{border-radius:2px;isolation:isolate;box-shadow:0 18px 40px #382e2712}
+.nr-phase12 .nr-editorial-tile:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,25,24,.72),transparent 54%);z-index:1}
+.nr-phase12 .nr-editorial-tile span{color:#fff;font-family:'Instrument Serif',Georgia,serif;font-size:clamp(32px,3vw,48px);letter-spacing:-.035em}
+.nr-phase12 .nr-editorial-tile small{font-family:Manrope,Arial,sans-serif;letter-spacing:.18em;margin-top:13px;color:#e3d7cb}
+.nr-phase12 .nr-editorial-tile img{transition:transform .75s cubic-bezier(.2,.75,.2,1)}
+.nr-phase12 .nr-editorial-tile:hover img,.nr-phase12 .nr-editorial-tile:focus-visible img{transform:scale(1.08) translateY(-8px)}
+.nr-phase12 .nr-product-card{min-width:0}
+.nr-phase12 .nr-product-visual{background:#e9e2d8;border:1px solid #dfd6c9;isolation:isolate}
+.nr-phase12 .nr-product-card:nth-child(4n+2) .nr-product-visual{background:#e1ded6}
+.nr-phase12 .nr-product-card:nth-child(4n+3) .nr-product-visual{background:#e3d7cc}
+.nr-phase12 .nr-product-card:nth-child(4n) .nr-product-visual{background:#d7d6ca}
+.nr-phase12 .nr-product-visual:after{content:'NÓRRIA / OBJECT STUDY';position:absolute;bottom:13px;left:15px;font-size:8px;font-weight:800;letter-spacing:.15em;color:#6a655f;pointer-events:none}
+.nr-phase12 .nr-product-visual a{display:block;height:100%}
+.nr-phase12 .nr-product-visual img{transition:transform .6s cubic-bezier(.16,.8,.26,1),opacity .2s}
+.nr-phase12 .nr-product-visual:hover img{transform:scale(1.06) translateY(-7px)}
+.nr-phase12 .nr-product-card h3{font-size:14px;letter-spacing:-.01em}
+.nr-phase12 .nr-fav-on-image{box-shadow:0 3px 10px #00000012}
+.nr-phase12 .nr-btn{transition:transform .24s,background .24s,box-shadow .24s}
+.nr-phase12 .nr-btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px #1e20192c}
+.nr-phase12 .nr-page-heading{background:linear-gradient(115deg,#f5f0e7,#ebe4d9)}
+.nr-phase12 .nr-page-heading .nr-h1{letter-spacing:-.058em}
+.nr-phase12 .nr-catalog-layout{gap:44px}
+.nr-phase12 .nr-catalog-layout aside{position:relative}
+.nr-phase12 .nr-filter-block{border-color:#d4c9bb}
+.nr-phase12 .nr-gallery-main{position:relative;background:#e8e1d5}
+.nr-phase12 .nr-gallery-thumbs button{transition:border-color .2s,transform .2s}
+.nr-phase12 .nr-gallery-thumbs button:hover{transform:translateY(-2px)}
+.nr-phase12 .nr-product-info{padding-top:20px}
+.nr-phase12 .nr-product-info h1{font-size:clamp(46px,5vw,76px)}
+.nr-phase12 .nr-product-info .nr-copy{font-size:14px}
+.nr-phase12 .nr-stage{background:#f0eae0;border:1px solid #d7cabb}
+.nr-phase12 .nr-summary{background:#e7ded2}
+.nr-phase12 .nr-footer{background:#242520}
+.nr-phase12 .nr-journal-image{isolation:isolate}
+.nr-phase12 .nr-journal-image:after{content:'NÓRRIA / COLLECTION STUDY';position:absolute;top:25px;left:25px;color:#67625c;font-size:9px;font-weight:800;letter-spacing:.17em}
+.nr-phase12 .nr-journal-image img{transition:transform .8s}
+.nr-phase12 .nr-journal-entry:hover img{transform:scale(1.055)}
+/* Editorial artworks depict material mood, not purchasable SKUs. */
+.nr-material-story{min-height:570px;position:relative;overflow:hidden;background:#47362b;color:#f7f0e7;isolation:isolate}
+.nr-material-story img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.nr-material-story:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#282722f5 0%,#282722ac 40%,transparent 100%);z-index:-1}
+.nr-material-story__body{min-height:570px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding-top:80px;padding-bottom:80px}
+.nr-material-story__body h2{font:normal clamp(60px,7vw,110px)/.98 'Instrument Serif',Georgia,serif;letter-spacing:-.05em;margin:28px 0;max-width:730px}
+.nr-material-story__body h2 em{color:#dec6ae}
+.nr-material-story__body p{max-width:430px;line-height:1.8;color:#ece0d3;font-size:14px}
+.nr-material-story__credit{position:absolute;bottom:20px;right:4%;font-size:10px;letter-spacing:.12em;color:#e4d6c9}
+.nr-material-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:18px;padding-top:40px;padding-bottom:40px}
+.nr-material-grid figure{min-width:0;margin:0;position:relative;overflow:hidden;background:#ddd6cc}
+.nr-material-grid img{width:100%;height:450px;object-fit:cover;display:block;transition:transform .7s}
+.nr-material-grid figure:hover img{transform:scale(1.035)}
+.nr-material-grid figcaption{position:absolute;left:27px;right:25px;bottom:26px;color:#fff;text-shadow:0 2px 12px #1717158e;font:normal 30px Georgia,serif}
+.nr-material-grid figcaption small{display:block;font:700 10px Manrope,Arial,sans-serif;letter-spacing:.19em;margin-top:13px;text-transform:uppercase}
+.nr-material-grid figure:first-child figcaption{color:#3e392f;text-shadow:none}
+.nr-material-note{display:grid;grid-template-columns:105px 1fr;gap:16px;margin-top:25px;padding:15px;background:#eee8de;align-items:center}
+.nr-material-note img{width:105px;height:95px;object-fit:cover}
+.nr-material-note figcaption{font-size:11px;line-height:1.7;color:#686056}
+.nr-filter-toggle{display:none}
+.nr-zoom-button{position:absolute;right:18px;bottom:18px;display:flex;align-items:center;gap:9px;z-index:2;background:#f8f5efeb;border:1px solid #b8ac9c;padding:12px 15px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
+.nr-zoom-dialog{border:0;padding:20px 20px 17px;max-width:min(90vw,760px);max-height:92vh;background:#f4f1ea;box-shadow:0 15px 100px #0008}
+.nr-zoom-dialog::backdrop{background:#171713d9;backdrop-filter:blur(6px)}
+.nr-zoom-dialog img{width:100%;max-height:75vh;object-fit:contain}
+.nr-zoom-dialog__bar{display:flex;gap:20px;align-items:center;justify-content:space-between;padding-top:10px;font-size:12px;color:#555}
+.nr-zoom-dialog button{background:#262721;color:#fff;border:0;min-height:42px;padding:8px 19px}
+@keyframes nr12up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.nr-phase12 .nr-onview{animation:nr12up .75s cubic-bezier(.2,.8,.25,1) both}
+.nr-phase12 .nr-hero-copy>*{animation:nr12up .85s both}
+.nr-phase12 .nr-hero-copy>*:nth-child(2){animation-delay:.12s}
+.nr-phase12 .nr-hero-copy>*:nth-child(3){animation-delay:.21s}
+.nr-phase12 .nr-hero-copy>*:nth-child(4){animation-delay:.3s}
+@media(max-width:840px){
+.nr-phase12 .nr-hero-inner{min-height:0}
+.nr-phase12 .nr-hero-copy{padding:82px 0 35px}
+.nr-phase12 .nr-hero-art{height:440px}
+.nr-phase12 .nr-hero--p12:before{background:linear-gradient(180deg,#22231fee 0%,#22231fcb 47%,#22231f66)}
+.nr-phase12 .nr-hero--p12{background-position:center top}
+.nr-phase12 .nr-catalog-layout aside{border:1px solid #d2c8ba;background:#f8f5ee;padding:15px}
+.nr-phase12 .nr-filter-toggle{display:flex;width:100%;justify-content:space-between;align-items:center;background:transparent;border:0;min-height:46px;padding:5px 2px;color:#2c2c26;font-size:13px;font-weight:800}
+.nr-phase12 .nr-filter-panel.nr-is-collapsed{display:none}
+.nr-phase12 .nr-filter-panel.nr-is-open{display:grid}
+}
+@media(max-width:560px){
+.nr-phase12 .nr-hero-copy{padding:66px 0 28px}
+.nr-phase12 .nr-hero h1{font-size:clamp(60px,15vw,82px)}
+.nr-phase12 .nr-hero-art{height:360px}
+.nr-phase12 .nr-hero-art:before{inset:4% 2% 8% 3%}
+.nr-phase12 .nr-hero-garment:nth-of-type(1){left:0;width:64%}
+.nr-phase12 .nr-hero-garment:nth-of-type(2){right:-12%;width:72%}
+.nr-phase12 .nr-section{padding-top:65px;padding-bottom:65px}
+.nr-material-story,.nr-material-story__body{min-height:540px}
+.nr-material-story:after{background:linear-gradient(180deg,#242521ec,#2425214a)}
+.nr-material-story__body{padding-top:90px;padding-bottom:90px}
+.nr-material-story__body h2{font-size:clamp(53px,15vw,74px)}
+.nr-material-grid{grid-template-columns:1fr}
+.nr-material-grid img{height:350px}
+.nr-zoom-dialog{padding:10px;max-width:96vw}
+.nr-phase12 .nr-product-card h3{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){
+.nr-phase12 *, .nr-phase12 *::before, .nr-phase12 *::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+
+@media(max-width:380px){.nr-phase12 .nr-header-inner{gap:5px}.nr-phase12 .nr-brand{font-size:18px;letter-spacing:.12em}.nr-phase12 .nr-brand small{font-size:7px;letter-spacing:.27em}.nr-phase12 .nr-header-actions{gap:1px}.nr-phase12 .nr-header-actions .nr-icon-link{padding:3px}.nr-phase12 .nr-header-actions .nr-icon-link svg{width:16px;height:16px}.nr-phase12 .nr-langs{padding-left:5px;gap:3px}.nr-phase12 .nr-menu-button{padding:5px}.nr-phase12 .nr-menu-button svg{width:20px}.nr-phase12 .nr-badge{height:14px;min-width:14px;font-size:8px}}
+
+.nr-case-captures{background:#e6ddd0;padding:92px 0}.nr-case-capture-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}.nr-case-capture-head h2{font:normal clamp(42px,5vw,68px)/1.08 'Instrument Serif',Georgia,serif;margin:13px 0 0}.nr-case-capture-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,.62fr);align-items:start;gap:27px}.nr-case-capture-grid figure{min-width:0;margin:0;padding:17px;background:#f5f1e9;box-shadow:0 10px 32px #332b2314}.nr-case-capture-grid img{width:100%;height:auto;display:block}.nr-case-capture-grid figcaption{font-size:11px;line-height:1.6;color:#68625a;padding:14px 2px 0}.nr-case-capture-note{margin-top:30px;font-size:12px;line-height:1.7;color:#656057;max-width:750px}@media(max-width:650px){.nr-case-captures{padding:55px 0}.nr-case-capture-grid{grid-template-columns:1fr}.nr-case-capture-grid figure:nth-child(2){max-width:350px;margin-inline:auto}.nr-case-capture-head{display:block}}

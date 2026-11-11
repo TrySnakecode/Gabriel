@@ -1,0 +1,177 @@
+/* Gabriel Basso Studio — Fase 07 / Motion Art Direction
+   Editorial movement with accessible static fallback. Scoped to Studio homepages only.
+   All effects are optional visual enhancements: no content is created exclusively by JS. */
+:root{--motion-ease:cubic-bezier(.22,1,.36,1);--motion-ink:#a94429;--motion-progress:0}
+body[data-motion-version="7"]{overflow-x:clip}
+/* Architectural lighting, drawn grain and orbit lines: warm, not neon. */
+.hero{background:radial-gradient(ellipse 56% 80% at 72% 34%,#ecdfd1 0,rgba(236,223,209,.13) 66%,transparent 100%),var(--ivory)}
+.hero-motion-field{position:absolute;inset:0;overflow:hidden;isolation:isolate;z-index:0;pointer-events:none}
+.hero-motion-field .field-ring{position:absolute;border:1px solid rgba(169,68,41,.12);border-radius:50%;height:min(66vw,980px);width:min(66vw,980px);top:-20%;right:-25%;transform-origin:center;opacity:.7}
+.hero-motion-field .field-ring--inner{height:min(44vw,660px);width:min(44vw,660px);top:0;right:-13%;border-color:rgba(169,68,41,.16)}
+.hero-motion-field .field-cross{position:absolute;color:rgba(169,68,41,.34);font:50px/1 var(--serif)}
+.hero-motion-field .field-cross--a{top:13%;right:11%}.hero-motion-field .field-cross--b{right:38%;bottom:13%;font-size:35px}
+.hero-motion-field .field-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(113,72,49,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(113,72,49,.035) 1px,transparent 1px);background-size:84px 84px;mask-image:linear-gradient(90deg,transparent 25%,black 92%);opacity:.45}
+.hero-inner{position:relative;z-index:2}
+.hero h1{position:relative}
+.hero h1>span,.hero h1>em{position:relative;will-change:auto}
+.hero h1 em{position:relative;text-shadow:1px 1px 0 rgba(169,68,41,.08)}
+.hero h1 em:after{content:'';position:absolute;left:1%;right:2%;bottom:3%;height:2px;background:currentColor;opacity:.48;transform-origin:left;transform:scaleX(.15)}
+.hero-art{transform-style:preserve-3d;transform:translate3d(var(--hero-move-x,0px),var(--hero-move-y,0px),0);transition:transform .9s var(--motion-ease)}
+.hero-art .portrait-frame{position:relative;overflow:hidden;border-radius:1px;transform:rotateX(var(--hero-rx,0deg)) rotateY(var(--hero-ry,0deg));transform-style:preserve-3d;transition:transform .75s var(--motion-ease),box-shadow .75s var(--motion-ease)}
+.hero-art .portrait-frame:after{content:'';position:absolute;inset:0;border:1px solid rgba(255,255,255,.25);pointer-events:none}
+.hero-art .portrait-frame img{transform:translate3d(0,var(--portrait-scroll,0px),0) scale(1.065);transition:transform .4s ease-out;will-change:auto}
+@media(hover:hover){.hero-art:hover .portrait-frame img{transform:translate3d(0,var(--portrait-scroll,0px),0) scale(1.10)}}
+.hero-motion-notation{position:absolute;right:-33px;top:37%;display:grid;gap:15px;justify-items:center;color:var(--terracotta);font-size:10px;letter-spacing:.2em;font-weight:700;writing-mode:vertical-rl;pointer-events:none}
+.hero-motion-notation i{font-style:normal;opacity:.4}
+.motion-notch{height:61px;width:1px;background:currentColor}
+.hero-kicker{transition:letter-spacing .6s ease}
+.hero:hover .hero-kicker{letter-spacing:.21em}
+.hero-footer>a span{display:inline-block;animation:motion-scroll-cue 2.3s ease-in-out infinite}
+@keyframes motion-scroll-cue{0%,100%{transform:translateY(-2px)}50%{transform:translateY(5px)}}
+.hero .stamp{animation-duration:22s}
+.hero .stamp span{animation:motion-stamp-heart 2.5s ease-in-out infinite}
+@keyframes motion-stamp-heart{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.13)}}
+/* Cinematic orchestrated intro: no blockers, no loaders, no text splitting that hurts AT. */
+.motion-capable:not(.motion-off) .hero .motion-title-line{opacity:0;transform:translate3d(0,26px,0);clip-path:inset(0 0 100% 0)}
+.motion-capable.motion-started:not(.motion-off) .hero .motion-title-line{animation:motion-title-reveal 1.12s var(--motion-ease) both}
+.motion-capable.motion-started:not(.motion-off) .hero .motion-title-line--1{animation-delay:.10s}
+.motion-capable.motion-started:not(.motion-off) .hero .motion-title-line--2{animation-delay:.24s}
+.motion-capable.motion-started:not(.motion-off) .hero .motion-title-line--3{animation-delay:.37s}
+.motion-capable.motion-started:not(.motion-off) .hero .motion-title-line--4{animation-delay:.50s}
+@keyframes motion-title-reveal{0%{opacity:0;transform:translate3d(0,26px,0);clip-path:inset(0 0 100% 0)}100%{opacity:1;transform:translate3d(0,0,0);clip-path:inset(0 0 0 0)}}
+.motion-capable:not(.motion-off) .hero-overline,.motion-capable:not(.motion-off) .hero-bottom,.motion-capable:not(.motion-off) .hero-footer{opacity:0;transform:translate3d(0,16px,0)}
+.motion-capable.motion-started:not(.motion-off) .hero-overline{animation:motion-fade-up .75s .08s var(--motion-ease) both}
+.motion-capable.motion-started:not(.motion-off) .hero-bottom{animation:motion-fade-up .85s .84s var(--motion-ease) both}
+.motion-capable.motion-started:not(.motion-off) .hero-footer{animation:motion-fade-up .8s 1.2s var(--motion-ease) both}
+@keyframes motion-fade-up{to{opacity:1;transform:translate3d(0,0,0)}}
+.motion-capable:not(.motion-off) .hero-art{opacity:0;clip-path:inset(0 0 100% 0)}
+.motion-capable.motion-started:not(.motion-off) .hero-art{animation:motion-photo-reveal 1.65s .32s var(--motion-ease) both}
+@keyframes motion-photo-reveal{0%{opacity:0;clip-path:inset(0 0 100% 0)}100%{opacity:1;clip-path:inset(0 0 0 0)}}
+.motion-capable.motion-started:not(.motion-off) .hero h1 em:after{animation:motion-underline 1.1s 1.2s var(--motion-ease) both}
+@keyframes motion-underline{from{transform:scaleX(.15)}to{transform:scaleX(.95)}}
+/* Ticker is ambient, not essential; original band stays in accessibility tree. */
+.discipline-band--animated{position:relative;display:block;overflow:hidden;padding:16px 0;isolation:isolate;background:#a94429;color:#f8efe9;border-top:0;border-bottom:0}
+.discipline-band--animated:before,.discipline-band--animated:after{position:absolute;content:'';z-index:2;top:0;bottom:0;width:10%;pointer-events:none}
+.discipline-band--animated:before{left:0;background:linear-gradient(90deg,#a94429,transparent)}
+.discipline-band--animated:after{right:0;background:linear-gradient(-90deg,#a94429,transparent)}
+.motion-sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.motion-marquee{display:flex;flex-wrap:nowrap;width:max-content;white-space:nowrap;transform:translateZ(0);animation:motion-marquee 42s linear infinite}
+.motion-marquee-set{display:flex;flex:0 0 auto;align-items:center;gap:38px;padding:0 19px}
+.motion-marquee span{font-size:12px;font-weight:800;letter-spacing:.17em;color:#f5e6da}
+.motion-marquee i{font:italic 28px/1 var(--serif);color:#f2c4ae}
+.discipline-band--animated:hover .motion-marquee{animation-play-state:paused}
+@keyframes motion-marquee{to{transform:translateX(-50%)}}
+/* Section reveal: elevate text and stagger cards, without altering static layout. */
+@media(prefers-reduced-motion:no-preference){
+  .motion-capable:not(.motion-off) .projects-grid .project-card[data-reveal]{transition:opacity .85s var(--motion-ease),transform 1.05s var(--motion-ease)}
+  .motion-capable:not(.motion-off) .projects-grid .project-card[data-reveal]:nth-child(even){transition-delay:.09s}
+  .motion-capable:not(.motion-off) .service-item[data-reveal]{transition:opacity .72s var(--motion-ease),transform .85s var(--motion-ease),padding-left .35s ease,border-color .3s ease}
+}
+.project-card .project-visual{cursor:pointer}
+.project-card .project-visual:after{content:'';position:absolute;inset:0;z-index:1;border:1px solid rgba(255,255,255,.22);transform:scale(.985);transition:transform .8s var(--motion-ease),border-color .4s ease;pointer-events:none}
+.project-card:hover .project-visual:after{transform:scale(.965);border-color:rgba(255,255,255,.8)}
+.project-card .project-visual img{transition:transform 1.5s var(--motion-ease),filter .8s ease}
+@media(hover:hover){.project-card:hover .project-visual img{transform:scale(1.085);filter:saturate(1.09)}}
+.project-visual-cta{transition:transform .45s var(--motion-ease),background .4s ease;transform:rotate(-45deg)}
+.project-card:hover .project-visual-cta{transform:rotate(0deg) scale(1.08);background:#a94429}
+.motion-view-cursor{position:absolute;z-index:5;top:0;left:0;width:105px;height:105px;display:grid;place-items:center;text-align:center;padding:16px;background:#f5eee4;color:#27211e;border:1px solid rgba(33,27,24,.13);border-radius:50%;font-size:10px;letter-spacing:.08em;font-weight:800;line-height:1.65;pointer-events:none;opacity:0;transform:translate3d(calc(var(--cursor-x,0px) - 52px),calc(var(--cursor-y,0px) - 52px),0) scale(.66);transition:opacity .22s ease,scale .3s ease;box-shadow:0 12px 27px rgba(0,0,0,.12)}
+@media(hover:hover) and (pointer:fine){.motion-capable:not(.motion-off) .project-visual:hover .motion-view-cursor{opacity:1;transform:translate3d(calc(var(--cursor-x,0px) - 52px),calc(var(--cursor-y,0px) - 52px),0) scale(1)}}
+/* Index responds as a living branded display. */
+.studio-index{background:linear-gradient(145deg,#24221f 0%,#2c2824 49%,#211f1d 100%)}
+.studio-index:after{content:'';position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(rgba(255,255,255,.26) .45px,transparent .6px);background-size:9px 9px;opacity:.065}
+.studio-index-layout,.studio-index-heading,.studio-index-disclosure{z-index:1}
+.studio-index-item{position:relative;overflow:hidden}
+.studio-index-item:before{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:#dd9578;transform:scaleX(0);transform-origin:left;transition:transform .65s var(--motion-ease)}
+.studio-index-item.is-active:before,.studio-index-item:hover:before{transform:scaleX(1)}
+.studio-index-item.is-active .studio-index-name{font-style:normal;letter-spacing:-.055em;text-shadow:0 0 15px rgba(233,186,162,.12)}
+.studio-panel-image:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(10deg,rgba(12,10,9,.25),transparent 48%)}
+.studio-panel-image img{transition:transform 1.25s var(--motion-ease)}
+.studio-index-panel:hover .studio-panel-image img{transform:scale(1.035)}
+.studio-index-panel.is-switching .studio-panel-image img{animation:motion-slide-image .8s var(--motion-ease) both}
+.studio-index-panel.is-switching .studio-panel-copy{animation:motion-panel-copy .7s .06s var(--motion-ease) both}
+@keyframes motion-slide-image{0%{opacity:.3;transform:scale(1.09) translateY(12px);filter:blur(7px)}100%{opacity:1;transform:scale(1) translateY(0);filter:blur(0)}}
+@keyframes motion-panel-copy{0%{opacity:.2;transform:translateY(9px)}100%{opacity:1;transform:translateY(0)}}
+/* Manifesto: slow orbital architecture offsets kinetic typography. */
+.studio-thesis{background:#a94429}
+.studio-thesis:before{animation:motion-orbit 25s ease-in-out infinite alternate}
+.studio-thesis:after{animation:motion-orbit 20s ease-in-out infinite alternate-reverse}
+@keyframes motion-orbit{from{translate:0 0;scale:1}to{translate:-2.7vw 2vw;scale:1.12}}
+.thesis-motion-axis{position:absolute;right:7%;top:13%;height:74%;width:1px;background:rgba(255,255,255,.16);pointer-events:none;transform:rotate(27deg);transform-origin:center}
+.thesis-motion-axis span{display:block;position:absolute;left:-3px;top:15%;height:7px;width:7px;border-radius:50%;background:#f7d3be;box-shadow:0 0 0 7px rgba(247,211,190,.09);animation:motion-axis-dot 5.5s ease-in-out infinite alternate}
+.thesis-motion-axis span:last-child{top:83%;animation-delay:2s}
+@keyframes motion-axis-dot{to{transform:translateY(30px)}}
+.thesis-glyph{animation:motion-glyph 18s linear infinite;transform-origin:center}
+@keyframes motion-glyph{to{transform:rotate(360deg)}}
+/* A little more life in quiet sections; clear states always win. */
+.about-photo{position:relative;isolation:isolate}
+.about-photo:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(155deg,rgba(169,68,41,.14),transparent 35%,rgba(16,15,14,.1));mix-blend-mode:screen}
+.about-photo img{transform:translate3d(0,var(--about-scroll,0px),0) scale(1.07)!important;transition:transform .25s ease-out!important}
+.about-skills span{transition:background .3s ease,color .3s ease,transform .4s var(--motion-ease)}
+.about-skills span:hover{background:#a94429;color:#fff;transform:translateY(-3px)}
+.service-item{position:relative;overflow:hidden}
+.service-item:after{content:'';position:absolute;left:0;bottom:0;width:100%;height:1px;background:#a94429;transform:scaleX(0);transform-origin:left;transition:transform .8s var(--motion-ease);pointer-events:none}
+.service-item:hover:after{transform:scaleX(1)}
+.service-star{transition:transform .7s var(--motion-ease),color .3s ease}
+.service-item:hover .service-star{transform:rotate(100deg) scale(1.3);color:#a94429}
+.process-list{position:relative}
+.process-step{transition:background .5s ease,box-shadow .5s ease,padding-left .5s var(--motion-ease)}
+.process-step.is-motion-active{background:linear-gradient(90deg,rgba(169,68,41,.075),transparent 75%);padding-left:12px}
+.process-step.is-motion-active .step-symbol{transform:translate(4px,-4px);color:#a94429}
+.step-symbol{transition:transform .5s var(--motion-ease),color .5s ease}
+.contact{position:relative;isolation:isolate}
+.contact:before{content:'';position:absolute;top:-130px;left:-120px;height:390px;width:390px;border:1px solid rgba(217,138,112,.09);border-radius:50%;pointer-events:none;z-index:0}
+.contact-grid{position:relative;z-index:1}
+.contact-panel{box-shadow:27px 27px 0 rgba(0,0,0,.11)}
+.primary-link,.nav-contact,.submit-button{transition:background .3s ease,color .3s ease,transform .45s var(--motion-ease),box-shadow .3s ease}
+@media(hover:hover){.primary-link:hover,.submit-button:hover{transform:translateY(-3px);box-shadow:0 11px 23px rgba(169,68,41,.18)}}
+/* Editorial section dot navigation. */
+.motion-rail{position:fixed;z-index:75;left:13px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:4px;padding:12px 7px;background:rgba(246,241,235,.8);border:1px solid rgba(169,68,41,.15);backdrop-filter:blur(12px);border-radius:24px}
+.motion-rail-link{display:flex;align-items:center;gap:5px;min-height:23px;min-width:18px;padding:3px 5px;text-decoration:none;color:#635b52;transition:color .3s ease}
+.motion-rail-dot{display:block;width:5px;height:5px;border-radius:50%;background:#9d9289;transition:transform .4s var(--motion-ease),background .3s ease,box-shadow .4s ease}
+.motion-rail-link.is-active .motion-rail-dot,.motion-rail-link:hover .motion-rail-dot{background:#a94429;transform:scale(1.55);box-shadow:0 0 0 3px #a9442922}
+.motion-rail-label{font-size:8px;letter-spacing:.06em;opacity:0;width:0;overflow:hidden;transition:opacity .25s ease,width .3s ease}
+.motion-rail-link:hover .motion-rail-label,.motion-rail-link:focus-visible .motion-rail-label{width:13px;opacity:1}
+/* The user can calm down the design even when OS motion preference is off. */
+.motion-setting{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:6px 10px;border:1px solid rgba(169,68,41,.25);border-radius:3px;background:transparent;color:#62594e;cursor:pointer;font-size:9px;letter-spacing:.1em;font-weight:800;transition:border-color .3s ease,color .3s ease,background .3s ease}
+.motion-setting:hover{background:#eee1d8;color:#a94429;border-color:#a94429}
+.motion-setting:focus-visible{outline:2px solid #a94429;outline-offset:4px}
+.motion-setting-icon{font-size:17px;line-height:1;transition:transform .55s var(--motion-ease)}
+.motion-setting:not([aria-pressed="true"]):hover .motion-setting-icon{transform:rotate(90deg)}
+.motion-setting[aria-pressed="true"]{background:#e8dfd6;color:#8a7d70}
+.motion-setting[aria-pressed="true"] .motion-setting-icon{opacity:.45}
+/* Mobile breathing room: no pointer-tracking, tilt, or side rail. */
+@media(max-width:1100px){.motion-rail{display:none}}
+@media(max-width:900px){.motion-setting{padding:6px;min-width:38px}.motion-setting-text{display:none}.hero-motion-field .field-ring{right:-45%;top:0}.hero-motion-notation{display:none}}
+@media(max-width:660px){
+ .hero-motion-field .field-grid{opacity:.14}.hero-motion-field .field-ring{height:380px;width:380px;right:-210px;top:90px}.hero-motion-field .field-ring--inner{height:250px;width:250px;right:-115px;top:155px}.hero-motion-field .field-cross{display:none}
+ .hero-art,.hero-art .portrait-frame{transform:none!important}.hero-art .portrait-frame img{transform:scale(1.045)!important}
+ .discipline-band--animated{padding:12px 0}.motion-marquee-set{gap:20px;padding:0 10px}.motion-marquee span{font-size:9px;letter-spacing:.14em}.motion-marquee i{font-size:18px}
+ .thesis-motion-axis{display:none}.studio-thesis:before{height:370px;width:370px}.studio-thesis:after{height:240px;width:240px}
+ .studio-index-panel.is-switching .studio-panel-image img{animation-duration:.45s}
+ .about-photo img{transform:scale(1.045)!important}.contact-panel{box-shadow:12px 12px 0 rgba(0,0,0,.11)}
+ .project-visual .motion-view-cursor{display:none}.motion-setting{min-width:34px;min-height:34px}
+ .hero .stamp span{animation:none}
+}
+/* Motion settings and system accessibility are absolute. No hidden content. */
+@media(prefers-reduced-motion:reduce){.motion-marquee{animation:none!important}.motion-marquee-set:last-child{display:none}.motion-title-line{clip-path:none!important;opacity:1!important;transform:none!important}.hero-overline,.hero-bottom,.hero-footer,.hero-art{opacity:1!important;clip-path:none!important;transform:none!important}.motion-rail{display:none}.motion-view-cursor{display:none!important}}
+.motion-off .motion-marquee{animation:none!important}
+.motion-off .motion-marquee-set:last-child{display:none}
+.motion-off .motion-title-line,.motion-off .hero-overline,.motion-off .hero-bottom,.motion-off .hero-footer,.motion-off .hero-art{clip-path:none!important;opacity:1!important;transform:none!important;animation:none!important}
+.motion-off .stamp,.motion-off .stamp span,.motion-off .thesis-glyph,.motion-off .studio-thesis:before,.motion-off .studio-thesis:after,.motion-off .hero-footer>a span,.motion-off .thesis-motion-axis span{animation:none!important}
+.motion-off .motion-view-cursor{display:none!important}
+.motion-off .hero-art .portrait-frame,.motion-off .hero-art .portrait-frame img,.motion-off .about-photo img{transform:none!important}
+.motion-off .studio-index-panel.is-switching .studio-panel-image img,.motion-off .studio-index-panel.is-switching .studio-panel-copy{animation:none!important}
+
+/* After the intro, enabling the motion preference must NOT replay a partially
+   masked scene. The first-frame animation is a one-time visit cue. */
+.motion-intro-complete.motion-capable:not(.motion-off) .hero .motion-title-line,
+.motion-intro-complete.motion-capable:not(.motion-off) .hero-overline,
+.motion-intro-complete.motion-capable:not(.motion-off) .hero-bottom,
+.motion-intro-complete.motion-capable:not(.motion-off) .hero-footer,
+.motion-intro-complete.motion-capable:not(.motion-off) .hero-art{animation:none!important;opacity:1!important;clip-path:none!important}
+.motion-intro-complete.motion-capable:not(.motion-off) .hero .motion-title-line,
+.motion-intro-complete.motion-capable:not(.motion-off) .hero-overline,
+.motion-intro-complete.motion-capable:not(.motion-off) .hero-bottom,
+.motion-intro-complete.motion-capable:not(.motion-off) .hero-footer{transform:none!important}
+
+.motion-setting:disabled{cursor:default;opacity:.6}
