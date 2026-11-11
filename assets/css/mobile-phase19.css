@@ -1,0 +1,58 @@
+/* Fase 19 — cartões do portfólio sem recortes no mobile.
+   A arte vertical de NÓRRIA usa apenas partes da capa original.
+   Desktop, fotos reais e integração FormSubmit permanecem intactos. */
+.work-card--norria .work-visual > picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.work-card--norria .work-visual > picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: saturate(.9);
+  transition: transform .85s cubic-bezier(.2,.75,.27,1), filter .65s;
+}
+.work-card--norria .work-visual:hover > picture > img,
+.work-card--norria .work-visual:focus-visible > picture > img {
+  transform: scale(1.055);
+  filter: saturate(1);
+}
+/* As quatro capas passam a mostrar a arte inteira, em sua proporção real.
+   Etiquetas e CTAs sobrepostos ocultos somente no mobile, onde
+   competiam com as palavras e geravam colisões com a imagem. */
+@media (max-width: 800px) {
+  .work-card .work-visual,
+  .work-card--feature .work-visual,
+  .work-card--compact .work-visual,
+  .work-card--wide .work-visual {
+    height: auto;
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+  .work-card .work-visual > img,
+  .work-card--norria .work-visual > picture > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    filter: none;
+  }
+  .work-card--norria .work-visual > picture { height: auto; }
+  .work-card .work-visual::after { display: none; }
+  .work-card .work-visual .visual-corner { display: none; }
+  .work-card .work-visual:hover > img,
+  .work-card .work-visual:focus-visible > img,
+  .work-card--norria .work-visual:hover > picture > img,
+  .work-card--norria .work-visual:focus-visible > picture > img {
+    transform: none;
+    filter: none;
+  }
+  .work-visual { background: transparent; }
+  /* CTA legível fica abaixo da imagem, sem cobrir títulos da arte. */
+  .work-links a { align-items: center; }
+}
